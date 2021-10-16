@@ -11,7 +11,6 @@ getgenv().PredictionVelocity = 10 -- The speed of the PredictMovement feature
 
 getgenv().CiazwareUniversalAimbotLoadingTime = tick()
 if CiazwareUniversalAimbotLoaded == true then
-    Notify("Ciazware", "Script Loaded Already", "", 3)
     return 
 end
 
@@ -164,13 +163,11 @@ Uis.InputBegan:Connect(function(Key)
                 local Target;Target = GetNearestTarget()
                 if Target ~= nil then 
                     AimlockTarget = Target
-                    Notify("Impostor Aimlock", "Aimlock Target: "..tostring(AimlockTarget), "", 3)
                 end
             end)
         end
         if Key.KeyCode == Enum.KeyCode[AimlockToggleKey] then 
             Aimlock = not Aimlock
-            Notify("Impostor Aimlock", "Aimlock: "..tostring(Aimlock), "", 3)
         end
     end
 end)
@@ -222,4 +219,3 @@ RService.RenderStepped:Connect(function()
     end
 end)
 
-SeparateNotify("Impostor Aimlock", " Aimbot loaded in: "..string.format("%.7f", tostring(tick() - CiazwareUniversalAimbotLoadingTime)), "", 3)
