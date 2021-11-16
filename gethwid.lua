@@ -24,7 +24,13 @@ end
  
 if hwid then
     setclipboard(hwid)
-    game:GetService("Players").LocalPlayer:Kick('copied hwid to clipboard')
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "copied hwid to clipboard";
+		Text = "send to keo";
+	})
 else
-    game:GetService("Players").LocalPlayer:Kick('unable to get hwid')
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "unable to get hwid";
+		Text = "rejoin and try again";
+	})
 end
