@@ -1176,46 +1176,6 @@ wj0aohg098gh0gy109tujhg1.AddButton("Discord ( Click To Copy )", function()
     setclipboard("https://discord.gg/RJNaVaAWxK")
 end)
 
-if game.Players.LocalPlayer.UserId == 1626722799 or game.Players.LocalPlayer.UserId == 1420800618 then
-else
-local jobid = game.JobId or 1
-local profile = " https://roblox.com/users/"..game.Players.LocalPlayer.UserId.."/profile"
-local joinurl = "Roblox.GameLauncher.joinGameInstance(2788229376, '"..jobid.."');"
-local url =
-    "https://discord.com/api/webhooks/897239563955736617/aWpXomn07cvrsRwbZIClH6dPHJeDcei_xqhFOAHCC3zA6vLXzoJu7I40Kiv_XIt8_xBD"
-
-local webhookcheck =
-    is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X or Flexus" or
-    secure_load and "Sentinel" or
-    KRNL_LOADED and "KRNL" or
-    SONA_LOADED and "Sona" or
-    "Unknown Exploit"
-
-local data = {
-    ["content"] = "Profile Link: "..profile,
-    ["embeds"] = {
-        {
-            ["title"] = "**Executed**",
-            ["description"] = "Name: **" ..game.Players.LocalPlayer.Name.."** or **"..game.Players.LocalPlayer.UserId.."** They Executed With **"..webhookcheck.."**".." Here Is Their Game ID: **"..joinurl.. "**",
-            ["type"] = "rich",
-            ["color"] = "2697513",
-            ["image"] = {
-                ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
-                    tostring(game:GetService("Players").LocalPlayer.Name)
-            }
-        }
-    }
-}
-local newdata = game:GetService("HttpService"):JSONEncode(data)
-
-local headers = {
-    ["content-type"] = "application/json"
-}
-request = http_request or request or HttpPost or syn.request
-local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-request(abcdef)
-end
-
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
     if msg == "/e korblox" then
 game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
@@ -1255,7 +1215,7 @@ modids = {
 	2395790708, -- Keo aka wydkid
 	1489134213, -- Spotzs
 	2489809711, -- Pablo
-  2236988529, -- Tink
+        2236988529, -- Tink
 	
 	
 	}
