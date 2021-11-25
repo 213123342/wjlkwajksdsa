@@ -1,5 +1,4 @@
 local AimingModule = loadstring(game:HttpGet("https://raw.githubusercontent.com/CatzCode/PikaHub/main/Libraries/AimingModule.lua"))()
-Aiming.TeamCheck(false)
 
 local Workspace = game:GetService("Workspace")
 local Players = game:GetService("Players")
