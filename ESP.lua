@@ -161,7 +161,7 @@ local function ESP(v)
                         Gun.Font = 3
                     end
                     Gun.Size = ESPSettings.TextSize
-                    Gun.Text = tostring("catgirls on top <3")
+                    Gun.Text = tostring("")
                     Gun.Position = Vector2.new(LegPosition.X, LegPosition.Y + 10)
                     Gun.Visible = true
                 else
